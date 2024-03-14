@@ -47,7 +47,7 @@ def send_coins(message):
         #_, sender_account, recipient_address, amount_str = message.text.split()     recipient_address, amount, "", "", false
         _, recipient_address, amount_str = message.text.split()
         amount = float(amount_str)
-        fee = 0.01  # Комиссия за транзакцию (0.01 KZC)
+        fee = 0.01  # Комиссия за транзакцию (0.01 KZC) Бесполезная строчка, забыл удалить
         txid = wallet.sendtoaddress(recipient_address, amount, "", "", False)
         bot.reply_to(message, f'Транзакция выполнена успешно. TXID: {txid}')
     except ValueError:
